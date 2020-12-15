@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<title>Конфигуратор клапанные блоки Метран</title>
+		<link type="text/css" rel="stylesheet" href="style/styleCommon.css">
+		<!-- ******************** -->
+		<link type="text/css" rel="stylesheet" href="style/styleMetran150.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+	
+		<div class = "container">
+			<h1 class = "headTitle">Конфигуратор условного обозначения датчика избыточного давления "метран-150TG" и абсолютного давления "метран-150TA"</h1>
+			<p class = "headTitle">Согласно руководству по эксплуатации <a href = "passports/metran150/СПГК.5225.000.00_РЭ(изм.111)_верс_3.5.pdf" target = "_blank">СПГК.5225.000.00 РЭ(изм.111) версия 3.5</a></p>
+			<ul class = "slidesList clear-style">
+				<li class="slideLabel" onclick="callSlide(1)">xx</li>
+				<li class="slideLabel" onclick="callSlide(2)">xx</li>
+				<li class="slideLabel" onclick="callSlide(3)">xx</li>
+				<li class="slideLabel" onclick="callSlide(4)">xx</li>
+				<li class="slideLabel" onclick="callSlide(5)">xx</li>
+				<li class="slideLabel" onclick="callSlide(6)">xx</li>
+				<li class="slideLabel" onclick="callSlide(7)">xx</li>
+				<li class="slideLabel" onclick="callSlide(8)">xx</li>
+				<li class="slideLabel" onclick="callSlide(9)">xx</li>
+				<li class="slideLabel" onclick="callSlide(10)">xx</li>
+				<li class="slideLabel" onclick="callSlide(11)">xx</li>
+				<li class="slideLabel" onclick="callSlide(12)">xx</li>
+				<li class="slideLabel" onclick="callSlide(13)">xx</li>
+				<li class="slideLabel" onclick="callSlide(14)">xx</li>
+			</ul>
+			<ul class="slides clear-style" id = "slides">
+				<li class="slide" id = "slide1">
+					<h2>Модель датчика:</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide1" onclick="setMark(0, 0), setSelected(0, 0)">
+						<!--usual choice-->
+							150TG - датчик избыточного давления
+						</li>
+						<li class="selector slide1" onclick="setMark(0, 1), setSelected(0, 1)">
+							150TA - датчик абсолютного давления
+						</li>
+					</ul>
+				</li>
+				<li class="slide" id="slide2">
+					<h2>Диапазон измерений</h2>
+					<table>
+						<tr>
+							<th>Код</th>
+							<th>Датчик 150TG</th>
+							<th>Датчик 150TA</th>
+						</tr>
+						<tr class = "selectable slide2" onclick = "setMark(1, 0), setSelected(1, 0)">
+							<td>1</td>
+							<td>(-101.3)-160кПа	</td>
+							<td>0-160кПа</td>
+						</tr>
+						<tr class = "selectable slide2" onclick = "setMark(1, 1), setSelected(1, 1)">
+							<td>2</td>
+							<td>(-101.3)-1.0МПа</td>
+							<td>0-1.0МПа</td>
+						</tr>
+						<tr class = "selectable slide2" onclick = "setMark(1, 2), setSelected(1, 2)">
+							<td>3</td>
+							<td>(-101.3)-6.0МПа</td>
+							<td>0-6.0МПа</td>
+						</tr>
+						<tr class = "selectable slide2" onclick = "setMark(1, 3), setSelected(1, 3)">
+							<td>4</td>
+							<td>(-101.3)-25МПа</td>
+							<td>0-25МПа</td>
+						</tr>
+						<tr class = "selectable slide2" onclick = "setMark(1, 4), setSelected(1, 4)">
+							<td>5</td>
+							<td>(-101.3)-60МПа</td>
+							<td>-</td>
+						</tr>
+					</table>
+					<p class = "toLeft"><i>101.3кПа - предполагаемое атмосферное давление, принимается как нулевая отметка.</i></p>
+				
+				</li>
+				<li class = "slide" id = "slide3">
+					<h2>Технологическое соединение</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide3" onclick="setMark(2, 0), setSelected(2, 0)">
+							М20х1.5 (код&nbsp;=&nbsp;2G)
+						</li>
+						<li class="selector slide3" id="label3-2" onclick="setMark(2, 1), setSelected(2, 1)">
+							1/2NPT, внутренняя резьба (код&nbsp;=&nbsp;2B)
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide4">
+				<!--for TG-->
+					<h2 class="slide4header">Материал разделительной мембраны</h2>
+				<!--for TA-->
+					<h2 class="slide4header">Материал деталей, контактирующих с рабочей средой</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide4" id="label4-2" onclick="setMark(3, 0), setSelected(3, 0)">
+							315L SST (код&nbsp;=&nbsp;2)
+						</li>
+						<li class="selector slide4" id="label4-3" onclick="setMark(3, 1), setSelected(3, 1)">
+							Hastelloy (код&nbsp;=&nbsp;3)
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide5">
+					<h2>Заполняющая жидкость</h2>
+					<p><i>(длина погружной части, зависит от выбранного кода исполнения защитной арматуры.)</i></p>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide5" onclick="setMark(4, 0), setSelected(4, 0)">
+							Силикон (код&nbsp;=&nbsp;1)
+						</li>
+						<li class="selector slide5" onclick="setMark(4, 1), setSelected(4, 1)">
+							Нет <!-- - -->
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide6">
+					<h2>Выходной сигнал</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide6" onclick="setMark(5, 0), setSelected(5, 0)">
+							4-20мА с цифровым сигналом на базе протокола HART (код&nbsp;=&nbsp;A)
+						</li>
+						<li class="selector slide6" onclick="setMark(5, 1), setSelected(5, 1)">
+							0-5мА (поставляется только с кодом М5 (встроенный ЖКИ), не применяется для датчиков с 
+							кодом IM (сертификация искробезопасности 0Ex ia IIC T5 GaX) (код&nbsp;=&nbsp;В)
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide7">
+					<h2>Индикация</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide7" onclick="setMark(6, 0), setSelected(6, 0)">
+							Встроенный ЖКИ* (код&nbsp;=&nbsp;М5)
+						</li>
+						<li class="selector slide6" onclick="setMark(6, 1), setSelected(6, 1)">
+							Нет <!-- - -->
+						</li>
+					</ul>
+					<p class = "toLeft"><i>* - Жидкокристаллический индикатор.</i></p>
+				</li>
+				<li class = "slide" id = "slide8">
+					<h2>Для специального применения</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide8" onclick="setMark(7, 0), setSelected(7, 0)">
+							Сертификация искробезопасности 0Ex ia IIC T5 Ga X (код&nbsp;=&nbsp;IM)
+						</li>
+						<li class="selector slide8" onclick="setMark(7, 1), setSelected(7, 1)">
+							Сертификация взрывобезопасности 1Ex db IIC T6 Gb X (код&nbsp;=&nbsp;EM)
+						</li>
+						<li class="selector slide8" onclick="setMark(7, 2), setSelected(7, 2)">
+							Искро/взрывозащиты нет
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide9">
+					<h2>Встроенные клапанные блоки</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide9" onclick="setMark(8, 0), setSelected(8, 0)">
+							Поставляется с установленным клапанным блоком* (не поставляется для датчиков с кодом ОР**).
+							(код&nbsp;=&nbsp;S5)
+						</li>
+						<li class="selector slide9" onclick="setMark(8, 1), setSelected(8, 1)">
+							Нет
+							<!-- Если установленного клапанного блока нет, то выбираем монтажные части. -->
+						</li>
+					</ul>
+					<p class = "toLeft"><i>* - Клапанный блок оформляется отдельно строкой, обозначение в соответствии с ТУ 3742-057-51453097-2009. 
+					При заказе датчика с кодом S5 монтажные части не указываются в обозначении датчика. Монтажные части указываются 
+					в обозначении клапанного блока.</i></p>
+					<p class = "toLeft"><i>** - код ОР - для применения на предприятиях "Газпром добыча Оренбург" (поставляется только с кодом разделительной 
+					мембраны и деталей, контактирующих с рабочей средой - 2 = 316L SST, без монтажных частей, без клапанного блока.</i></p>
+				</li>
+				<li class = "slide" id = "slide10">
+					<h2>Монтажные части (только для кода технологического соединения 2G, не поставляются для датчиков с кодом ОР*.</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide10" onclick="setMark(9, 0), setSelected(9, 0)">
+							Переходники с резьбой 1/4 NPT внутренней (код&nbsp;=&nbsp;2A)
+						</li>
+						<li class="selector slide10" onclick="setMark(9, 1), setSelected(9, 1)">
+							Переходники с резьбой 1/4 NPT наружной (код&nbsp;=&nbsp;2D)
+						</li>
+						<li class="selector slide10" onclick="setMark(9, 2), setSelected(9, 2)">
+							Переходники с резьбой 1/2 NPT наружной (код&nbsp;=&nbsp;2E)
+						</li>
+						<li class="selector slide10" onclick="setMark(9, 3), setSelected(9, 3)">
+							Ниппель (внутренний &#8960;8) с накидной гайкой М20х1,5 (код&nbsp;=&nbsp;2F)
+						</li>
+						<li class="selector slide10" onclick="setMark(9, 4), setSelected(9, 4)">
+							Ниппель (внутренний &#8960;10) с накидной гайкой М20х1,5 (код&nbsp;=&nbsp;2H)
+						</li>
+					</ul>
+					<p class = "toLeft"><i>* - код ОР - для применения на предприятиях "Газпром добыча Оренбург" (поставляется только с кодом разделительной 
+						мембраны и деталей, контактирующих с рабочей средой - 2 = 316L SST, без монтажных частей, без клапанного блока.</i></p>
+				</li>
+				<li class = "slide" id = "slide11">
+					<h2>Материал ниппеля* (только для кодов монтажных частей 2F**, 2H***)</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide11" onclick="setMark(10, 0), setSelected(10, 0)">
+							Сталь 12Х18Н10Т или 316L SST (код&nbsp;=&nbsp;2)
+						</li>
+						<li class="selector slide11" onclick="setMark(10, 1), setSelected(10, 1)">
+							Углеродистая сталь с покрытием (код&nbsp;=&nbsp;4)
+						</li>
+						<li class="selector slide11" onclick="setMark(10, 2), setSelected(10, 2)">
+							Углеродистая сталь 09Г2С с покрытием (код&nbsp;=&nbsp;5)
+						</li>
+					</ul>
+					<p class = "toLeft"><i>* - Материал уплотнительной прокладки - сталь 12Х18Н10Т для кода материала ниппеля 2
+						, медь - для кодов материала ниппеля 4 (углеродистая сталь с покрытием) и 
+						5 (углеродистая сталь 09Г2С). Материал накидной гайки для кода 2F, 2H - 
+						углеродистая сталь с покрытием.</i></p>
+					<p class = "toLeft"><i>** - 2F - Ниппель (внутренний &#8960;8) с накидной гайкой М20х1,5</i></p>
+					<p class = "toLeft"><i>*** - 2H - Ниппель (внутренний &#8960;10) с накидной гайкой М20х1,5</i></p>
+				</li>
+				<li class = "slide" id = "slide12">
+					<h2>Монтажные кронштейны</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide12" onclick="setMark(11, 0), setSelected(11, 0)">
+							Монтажный кронштейн для крепления на панели (материал - углеродистая сталь с 
+							покрытием) (код&nbsp;=&nbsp;В1)
+						</li>
+						<li class="selector slide12" onclick="setMark(11, 1), setSelected(11, 1)">
+							Монтажный кронштейн для крепления на панели (материал - сталь 12Х18Н10Т) (код&nbsp;=&nbsp;В4)
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide13">
+					<h2>Гарантийный срок эксплуатации</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide13" onclick="setMark(12, 0), setSelected(12, 0)">
+							Гарантийный срок эксплуатации датчиков - 5 лет (код&nbsp;=&nbsp;WR5)
+						</li>
+						<li class="selector slide13" onclick="setMark(12, 1), setSelected(12, 1)">
+							Гарантия не имеет значения <!-- - -->
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide14">
+					<h2>Дополнительные опции</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide14" onclick="setMark(13, 0), setSelected(13, 0)">
+							Лист калибровочных данных (код&nbsp;=&nbsp;Q4)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 1), setSelected(13, 1)">
+							Настройка датчика по заказу потребителя (необходимо заполнить лист параметров 
+							настройки) (код&nbsp;=&nbsp;С1)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 2), setSelected(13, 2)">
+							Маркировочная табличка по заказу потребителя (необходимо заполнить лист параметров 
+							настройки, код С1 в заказе не указывают) (код&nbsp;=&nbsp;ST)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 3), setSelected(13, 3)">
+							Штепсельный разъём: вилка 2РМГ14Б4Ш1Е2Б ГЕО.364.140 ТУ (розетка 2РМ14КПН4Г1В1 ГЕО.364.126 ТУ 
+							или СКНЦ.5523.129 ТУ) (не применяется для датчиков с кодами ЕМ) (код&nbsp;=&nbsp;SC)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 4), setSelected(13, 4)">
+							Штепсельный разъём DIN 43650 (не применяется для датчиков с кодами ЕМ), степень защиты IP65 ГОСТ 
+							14254 (базовое расположение в соответствии с рисунком Ж12. (код&nbsp;=&nbsp;SC1)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 5), setSelected(13, 5)">
+							Штепсельный разъём: вилка 2РМ22Б4ШЗВ1 ГЕО.364.140 ТУ или СКНЦ.5523.129 ТУ (разетка 2РМ22КПН4Г3В1 
+							ГЕО.364.126 ТУ или СКНЦ.5523.129 ТУ(не применяется для датчиков с кодом EM - 
+							"Сертификация взрывобезопасности 1Ex db IIC T6 Gb X") (базовое расположение в соответствии 
+							с рисунком Ж12) (код&nbsp;=&nbsp;SC2)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 6), location.assign('#cable_entries'), setSelected(13, 6)">
+							Кабельный ввод (нажмите, чтобы перейти в таблицу подбора) <!--goToTable links to #cable_entries -->
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 7), setSelected(13, 7)">
+							Предел допускаемой основной погрешности &plusmn;0,2% (код&nbsp;=&nbsp;PA)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 8), setSelected(13, 8)">
+							Предел допускаемой основной погрешности &plusmn;0,5% (код&nbsp;=&nbsp;PC)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 9), setSelected(13, 9)">
+							Клеммный блок для промышленной электромагнитной обстановки по ГОСТ Р МЭК 61326-1 (код&nbsp;=&nbsp;T0)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 10), setSelected(13, 10)">
+							Накладка для защиты параметров настройки датчика
+							(применяется для датчиков с кодом М5 = со встроенным жидкокристаллическим индикатором) (код&nbsp;=&nbsp;J5)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 11), setSelected(13, 11)">
+							Температура окружающей среды от минус 55&deg;С (применяется для датчиков с кодом выходного сигнала 
+							А = 4...20мА и материалом разделительной мембраны с кодом 2 = 316L SST) (код&nbsp;=&nbsp;LT)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 12), setSelected(13, 12)">
+							Средний срок службы 30 лет (код&nbsp;=&nbsp;ML)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 13), setSelected(13, 13)">
+							Дополнительная технологическая наработка в течение 360 часов (применяется только для датчиков с кодом 
+							IM, EM = (искро, взрывозащищенные) (код&nbsp;=&nbsp;AR)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 14), setSelected(13, 14)">
+							Исполнение "экспорт" (код&nbsp;=&nbsp;Exp)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 15), setSelected(13, 15)">
+							Для применения на предприятиях "Газпром добыча Оренбург" (поставляется только с кодом разделительной 
+							мембраны и деталей, контактирующих с рабочей средой - 2 = 316L SST; поставляется без монтажных 
+							частей, без клапанного блока) (код&nbsp;=&nbsp;ОР)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 16), setSelected(13, 16)">
+							Альтернативное расположение штепсельного разъёма в соответствии с рис.Ж12. (код&nbsp;=&nbsp;OS)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 17), setSelected(13, 17)">
+							Оформление свидетельства о поверке (в паспорте указывается номер свидетельства о поверке и дата) (код&nbsp;=&nbsp;QM)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 18), setSelected(13, 18)">
+							Сертификат ИНТЕРГАЗСЕРТ (в паспорте указывается номер сертификата) (код&nbsp;=&nbsp;IG)
+						</li>
+						<li class="selector slide14" onclick="setMark(13, 19), setSelected(13, 19)">
+							Сертификат соответствия нормам по сейсмостойкости (код&nbsp;=&nbsp;SM)
+						</li>
+					</ul>
+					<h3>Штепсельные разъемы датчиков метран 150</h3>
+					<img width="822" height="362" title="варианты расположения электрических разъёмов" alt="варианты расположения электрических разъёмов" src="images/metran150/рисунокЖ12.png">
+					<img width="813" height="291" title="Габаритные размеры электрических разъемов" alt="Габаритные размеры электрических разъемов" src="images/metran150/таблицаЖ1_1.png">
+					<h3>Кабельные вводы датчиков метран 150 согласно <a href = "passports/metran150/каталог-датчики-давления-метран-выпуск-2020-ru-ru-61692.pdf" target = "_blank">каталогу датчиков давления метран (выпуск 2020)</a></h3>
+					<p class = "toLeft">Кабельные вводы предназначены для фиксации различных типов кабелей при подключении датчиков с целью защиты
+					от попадания внутрь корпуса влаки и пыли. Кабельные вводы (кроме К01, К04, К05, К09) имеют взрывозащищенныое исполнение
+					с маркировкой взрывозащиты ExdIIC.</p>
+					<p class = "toLeft">Кабельные вводы поставляются в комплекте с датчиком.</p>
+					<p class = "toLeft">Диаметр кабеля может быть изменен в незначительных пределах.</p>
+					<p class = "toLeft">Степень защиты от воздействия пыли и воды IP66 по ГОСТ 14254.</p>
+					<p class = "toLeft">Диапазон температур окружающей среды для металлических кабельных вводов от -60 до 130&deg;С, для кабельных вводов
+					из полиамида от -20 до 70&deg;С.</p>
+					<table id = "cable_entries">
+						<caption>Таблица 1 (раздел "Кабельные вводы" каталога "Датчики давления метран, выпуск 2020)"</caption>
+						<tr>
+							<th>Код</th>
+							<th>Материал</th>
+							<th>Описание</th>
+						</tr>
+						<tr>
+							<th colspan = "3">Кабельные вводы для датчиков давления с резьбовыми отверстиями М20х1,5</th>
+						</tr>
+						<tr class = "selectable">
+							<td>К01</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель диаметром 6,5 - 13,9мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К02</td>
+							<td>Нержавеющая сталь</td>
+							<td>Небронированный кабель диаметром 6,5 - 13,9мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К03</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель диаметром 6,1 - 11,6мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К04</td>
+							<td>Полиамид</td>
+							<td>Небронированный кабель диаметром 6,0 - 12,0мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К12</td>
+							<td>Никелированная латунь</td>
+							<td>Бронированный кабель, диаметр кабеля 5,0 - 14,0мм, диаметр брони 10,0 - 21,0мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К14</td>
+							<td>Никелированная латунь</td>
+							<td>Бронированный кабель, диаметр кабеля 6,0 - 12,0мм, диаметр брони 8,0 - 16,0мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К17</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-15, ГЕРДА-МГ-16)</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К18</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-18)</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К19</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-20, МРПИ-20)</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К20</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-15, ГЕРДА-МГ-16)</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К21</td>
+							<td>Нержавеющая сталь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-18)</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К22</td>
+							<td>Нержавеющая сталь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-20, МРПИ-20)</td>
+						</tr>
+						<tr>
+							<th colspan = "3">Кабельные вводы для датчиков давления с резьбовым отверстием 1/2-14 NPT</th>
+						</tr>
+						<tr class = "selectable">
+							<td>К05</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель диаметром 6,5 - 13,9мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К06</td>
+							<td>Нержавеющая сталь</td>
+							<td>Небронированный кабель диаметром 4,0 - 8,5мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К07</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель диаметром 6,0 - 11,6мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К08</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель диаметром 4,0 - 8,5мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К09</td>
+							<td>Полиамид</td>
+							<td>Небронированный кабель диаметром 6,0 - 12,0мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К15</td>
+							<td>Никелированная латунь</td>
+							<td>Бронированный кабель, диаметр кабеля 6,0 - 12,0мм, диаметр брони 8,0 - 16,0мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К16</td>
+							<td>Никелированная латунь</td>
+							<td>Бронированный кабель, диаметр кабеля 5,0 - 14,0мм, диаметр брони 10,0 - 21,0мм</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К23</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-15, ГЕРДА-МГ-16)</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К24</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-18)</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К25</td>
+							<td>Никелированная латунь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-20, МРПИ-20)</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К26</td>
+							<td>Нержавеющая сталь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-15, ГЕРДА-МГ-16)</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К27</td>
+							<td>Нержавеющая сталь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-18)</td>
+						</tr>
+						<tr class = "selectable">
+							<td>К28</td>
+							<td>Нержавеющая сталь</td>
+							<td>Небронированный кабель, проложенный в гибком металлорукаве (РЗ-ЦХ-20, МРПИ-20)</td>
+						</tr>
+						<tr>
+							<th colspan = "3">Дополнительно</th>
+						</tr>
+						<tr id="setMeClass"> <!-- if K02 ... K22 selected then class = "selectable" -->
+							<td>К3</td>
+							<td>Никелированная латунь</td>
+							<td>Кольцо заземления М20 для кабельных вводов К12...К22</td>
+						</tr>
+						
+						<!-- test -->
+						<script>
+							document.getElementById("setMeClass").classList.add("selectable");
+							document.getElementById("setMeClass").classList.add("selected");
+						</script>
+						
+					</table>
+					<h3>Размеры кабельных вводов</h3>
+					<div class = "cable_entries_section">
+						<img width = "220" height = "210" title = "кабельный ввод вариант 1" alt = "кабельный ввод вариант 1" src = "images/metran150/cable_entries_image1.png">
+						<table>
+							<caption>Таблица 2</caption>
+							<tr>
+								<th>Код</th>
+								<th>L, мм</th>
+								<th>D</th>
+							</tr>
+							<tr>
+								<td>К01; К02; К03</td>
+								<td>36</td>
+								<td>М20х1,5</td>
+							</tr>
+							<tr>
+								<td>К05; К07</td>
+								<td>38</td>
+								<td>NPT 1/2</td>
+							</tr>
+							<tr>
+								<td>К06; К08</td>
+								<td>34</td>
+								<td>NPT 1/2</td>
+							</tr>
+						</table>
+					</div>
+					<div class = "cable_entries_section">
+						<img width = "210" height = "170" title = "кабельный ввод вариант 2" alt = "кабельный ввод вариант 2" src = "images/metran150/cable_entries_image2.png">
+						<table>
+							<caption>Таблица 3</caption>
+							<tr>
+								<th>Код</th>
+								<th>L1, мм</th>
+								<th>L2, мм</th>
+								<th>D</th>
+							</tr>
+							<tr>
+								<td>К04</td>
+								<td>10,0</td>
+								<td>32,4</td>
+								<td>М20х1,5</td>
+							</tr>
+							<tr>
+								<td>К09</td>
+								<td>15,0</td>
+								<td>32,4</td>
+								<td>NPT 1/2</td>
+							</tr>
+						</table>
+					</div>
+					<div class = "cable_entries_section">
+						<img width = "350" height = "220" title = "кабельный ввод вариант 3" alt = "кабельный ввод вариант 3" src = "images/metran150/cable_entries_image3.png">
+						<table>
+							<caption>Таблица 4</caption>
+							<tr>
+								<th>Код</th>
+								<th>L, мм</th>
+								<th>L1, мм</th>
+								<th>L2, мм</th>
+								<th>D</th>
+							</tr>
+							<tr>
+								<td>К14</td>
+								<td>64</td>
+								<td>15</td>
+								<td>49</td>
+								<td>М20х1,5</td>
+							</tr>
+							<tr>
+								<td>К12</td>
+								<td>77</td>
+								<td>15</td>
+								<td>62</td>
+								<td>М20х1,5</td>
+							</tr>
+							<tr>
+								<td>К15</td>
+								<td>66</td>
+								<td>17</td>
+								<td>49</td>
+								<td>NPT 1/2</td>
+							</tr>
+							<tr>
+								<td>К16</td>
+								<td>79</td>
+								<td>17</td>
+								<td>62</td>
+								<td>NPT 1/2</td>
+							</tr>
+						</table>
+					</div>
+					<div class = "cable_entries_section">
+						<img width = "280" height = "205" title = "кабельный ввод вариант 4" alt = "кабельный ввод вариант 4" src = "images/metran150/cable_entries_image4.png">
+						<table>
+							<caption>Таблица 5</caption>
+							<tr>
+								<th>Код</th>
+								<th>L, мм</th>
+								<th>L1, мм</th>
+								<th>L2, мм</th>
+								<th>D</th>
+							</tr>
+							<tr>
+								<td>К17; К20</td>
+								<td>59</td>
+								<td>15</td>
+								<td>44</td>
+								<td>М20х1,5</td>
+							</tr>
+							<tr>
+								<td>К23; К26</td>
+								<td>61</td>
+								<td>17</td>
+								<td>44</td>
+								<td>NPT 1/2</td>
+							</tr>
+							<tr>
+								<td>К19; К22</td>
+								<td>63</td>
+								<td>15</td>
+								<td>48</td>
+								<td>М20х1,5</td>
+							</tr>
+							<tr>
+								<td>К18; К21</td>
+								<td>61</td>
+								<td>15</td>
+								<td>46</td>
+								<td>М20х1,5</td>
+							</tr>
+							<tr>
+								<td>К24; К27</td>
+								<td>63</td>
+								<td>17</td>
+								<td>46</td>
+								<td>NPT 1/2</td>
+							</tr>
+							<tr>
+								<td>К25; К28</td>
+								<td>65</td>
+								<td>17</td>
+								<td>48</td>
+								<td>М20х1,5</td>
+							</tr>
+						</table>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<script src="script/scriptCommon.js"></script>
+		<script src="script/scriptMetran150.js"></script>
+	</body>
+</html>

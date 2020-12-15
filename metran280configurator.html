@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<title>Конфигуратор Метран 150TG</title>
+		<link type="text/css" rel="stylesheet" href="style/styleCommon.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+	
+		<div class = "container">
+			<h1 class = "headTitle">Конфигуратор условного обозначения датчика температуры "метран-280"</h1>
+			<p class = "headTitle">Согласно руководству по эксплуатации <a href = "passports/metran280/281.01.00.000_РЭ_(изм.37)_версия_3.7.pdf" target = "_blank">281.01.00.000 РЭ (изм. 37) версия 3.7</a></p>
+			<ul class = "slidesList clear-style">
+				<li class = "slideLabel" onclick = "callSlide(1)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(2)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(3)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(4)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(5)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(6)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(7)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(8)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(9)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(10)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(11)">xx</li>
+				<li class = "slideLabel" onclick = "callSlide(12)">ТУ</li>
+				
+			</ul>
+			<ul class = "slides clear-style" id = "slides">
+				<li class = "slide" id = "slide1">
+					<h2>Модель преобразователя температуры:</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide1" onclick="setMark(0, 0), setSelected(0, 0)">
+							Метран-281 - НСХ типа К
+						</li>
+						<li class="selector slide1" onclick="setMark(0, 1), setSelected(0, 1)">
+							<!--usual choice-->
+							Метран-286 - НСХ типа Pt100
+						</li>
+						<li class="selector slide1" onclick="setMark(0, 2), setSelected(0, 2)">
+							Метран-288 - НСХ типа N
+						</li>
+					</ul>	
+					<p>- ТСП (Pt100) с возможностью измерения температуры до 500°С;</p>
+					<p>- ТХА(К) с возможностью измерения температуры до 1000°С;</p>
+					<p>- ТНН(N) с возможностью измерения температуры до 1200°С.</p>
+				</li>
+				<li class = "slide" id = "slide2">
+					<h2>Код исполнения защитной арматуры:</h2>
+					<ul class="clear-style selectors-img">
+						<li class="img-selectors slide2" id="label2-1" onclick="setMark(1, 0), setSelected(1, 0)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers01.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-2" onclick="setMark(1, 1), setSelected(1, 1)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers02.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-3" onclick="setMark(1, 2), setSelected(1, 2)">
+								<img width="340" height="480" alt="" src="images/metran280/vers03.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-4" onclick="setMark(1, 3), setSelected(1, 3)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers04.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-5" onclick="setMark(1, 4), setSelected(1, 4)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers05.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-6" onclick="setMark(1, 5), setSelected(1, 5)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers06.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-7" onclick="setMark(1, 6), setSelected(1, 6)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers07.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-8" onclick="setMark(1, 7), setSelected(1, 7)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers12Exd.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-9" onclick="setMark(1, 8), setSelected(1, 8)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers13Exd.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-10" onclick="setMark(1, 9), setSelected(1, 9)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers14Exd.png">
+						<li class="img-selectors slide2" id="label2-11" onclick="setMark(1, 10), setSelected(1, 10)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers15Exd.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-12" onclick="setMark(1, 11), setSelected(1, 11)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers16Exia.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-13" onclick="setMark(1, 12), setSelected(1, 12)">
+						<!--plane Exia-->
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers17Exia.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-14" onclick="setMark(1, 13), setSelected(1, 13)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers18Exia.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-15" onclick="setMark(1, 14), setSelected(1, 14)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers19Exia.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-16" onclick="setMark(1, 15), setSelected(1, 15)">
+						<!--plane Exd-->
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers23Exd.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-17" onclick="setMark(1, 16), setSelected(1, 16)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers24Exd.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-18" onclick="setMark(1, 17), setSelected(1, 17)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers31.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-19" onclick="setMark(1, 18), setSelected(1, 18)">
+						<!--plane Simple-->
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers32.png">
+						</li>
+						<li class="img-selectors slide2" id="label2-20" onclick="setMark(1, 19), setSelected(1, 19)">
+								<img width="340" height="480" title="" alt="" src="images/metran280/vers33.png">
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide3">
+					<h2>Обозначение взрывозащиты (при её наличии):</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide3" onclick="setMark(2, 0), setSelected(2, 0)">
+							Exia - взрывозащита вида "искробезопасная электрическая цепь ia"
+						</li>
+						<li class="selector slide3" id="label3-2" onclick="setMark(2, 1), setSelected(2, 1)">
+							Exd - взрывозащита вида "взрывонепроницаемая оболочка d"
+						</li>
+						<li class="selector slide3" id="label3-3" onclick="setMark(2, 2), setSelected(2, 2)">
+							Нет взрывозащиты
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide4">
+					<h2>Измерительный преобразователь:</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide4" id="label4-2" onclick="setMark(3, 0), setSelected(3, 0)">
+						<!--usual choice-->
+							Метран-280
+						</li>
+						<!-- excluded from new redaction
+						<li class="selector slide4" id="label4-3" onclick="setMark(3, 1), setSelected(3, 1)">
+							Метран-646
+						</li>
+						-->
+					</ul>
+				</li>
+				<li class = "slide" id = "slide5">
+					<h2>Длина монтажной части L,мм:</h2>
+					<p><i>(длина погружной части, зависит от выбранного кода исполнения защитной арматуры.)</i></p>
+					<ul class="clear-style selectors-txt">
+						<li class="selector sensor-length slide5" onclick="setMark(4, 0), setSelected(4, 0)">
+							60
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 1), setSelected(4, 1)">
+							80
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 2), setSelected(4, 2)">
+							100
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 3), setSelected(4, 3)">
+							120
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 4), setSelected(4, 4)">
+							160
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 5), setSelected(4, 5)">
+							200
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 6), setSelected(4, 6)">
+							250
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 7), setSelected(4, 7)">
+							320
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 8), setSelected(4, 8)">
+							400
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 9), setSelected(4, 9)">
+							500
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 10), setSelected(4, 10)">
+							630
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 11), setSelected(4, 11)">
+							800
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 12), setSelected(4, 12)">
+							1000
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 13), setSelected(4, 13)">
+							1250
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 14), setSelected(4, 14)">
+							1600
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 15), setSelected(4, 15)">
+							2000
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 16), setSelected(4, 16)">
+							2500
+						</li>
+						<li class="selector sensor-length slide5" onclick="setMark(4, 17), setSelected(4, 17)">
+							3150
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide6">
+					<h2>Код исполнения материала защитной арматуры:</h2>
+					<p><i>(зависит от выбранного кода исполнения защитной арматуры.)</i></p>
+					<ul class="clear-style selectors-txt">
+						<li class="selector sensor-material slide6" onclick="setMark(5, 0), setSelected(5, 0)">
+							12X18H10T
+						</li>
+						<li class="selector sensor-material slide6" onclick="setMark(5, 1), setSelected(5, 1)">
+							10X17H13M2T
+						</li>
+						<li class="selector sensor-material slide6" onclick="setMark(5, 2), setSelected(5, 2)">
+							10X23H18
+						</li>
+						<li class="selector sensor-material slide6" onclick="setMark(5, 3), setSelected(5, 3)">
+							XH45Ю
+						</li>
+						<li class="selector sensor-material slide6" onclick="setMark(5, 4), setSelected(5, 4)">
+							XH78T
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide7">
+					<h2>Диапазон измерений, &deg;C</h2>
+					<p>min = <input type="number" min="-50" max="500" step="5" value="0" id="minTemp"> (-50 ... +500)</p>
+					<p>max = <input type="number" min="-50" max="500" step="5" value="50" id="maxTemp"> (-50 ... +500)</p>
+					<div class="selector" onclick="setTemp()">Задать</div>
+				</li>
+				<li class = "slide" id = "slide8">
+					<h2>Тип монтажного комплекта</h2>
+					<p>Указывается только для Метран-Exd!</p>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide8" onclick="setMark(7, 0), setSelected(7, 0)">
+							БК – бронированный кабель
+						</li>
+						<li class="selector slide8" onclick="setMark(7, 1), setSelected(7, 1)">
+							ТБ – трубный монтаж
+						</li>
+						<li class="selector slide8" onclick="setMark(7, 2), setSelected(7, 2)">
+							З - заглушка
+						</li>
+						<li class="selector slide8" onclick="setMark(7, 3), setSelected(7, 3)">
+							Этот датчик не Exd (оболочка не взрывозащищенная)!
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide9">
+					<h2>Температурный класс по <a href="http://docs.cntd.ru/document/1200103394" target="_blank">
+					ГОСТ 30852.0</a></h2>
+					<p>Указывается только для Метран-Ехd, -Exia!</p>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide9" onclick="setMark(8, 0), setSelected(8, 0)">
+							T5 - максимальная температура поверхности 100&deg;С.
+						</li>
+						<li class="selector slide9" onclick="setMark(8, 1), setSelected(8, 1)">
+							T6 - максимальная температура поверхности 85&deg;С.
+						</li>
+						<li class="selector slide9" onclick="setMark(8, 2), setSelected(8, 2)">
+							Взрывозащиты нет!
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide10">
+					<h2>Климатическое исполнение по <a href="http://docs.cntd.ru/document/1200003320" target="_blank">
+					ГОСТ 15150</a></h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide10" onclick="setMark(9, 0), setSelected(9, 0)">
+							У1.1 – Метран-280 (для температуры окружающего воздуха от -40 до +70 &deg;С)
+						</li>
+						<li class="selector slide10" onclick="setMark(9, 1), setSelected(9, 1)">
+							У1.1(-50 +85) &deg;С – Метран-280 (для температуры окружающего воздуха от -50 до +85 &deg;С) 
+							и Метран-280 -Exd, -Exia только для температурного класса Т5.
+						</li>
+					</ul>
+				</li>
+				<li class = "slide" id = "slide11">
+					<h2>Дополнительные опции.</h2>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide11" onclick="setMark(10, 0), setSelected(10, 0)">
+							Дополнительных опций нет, 
+							стандартное исполнение.
+						</li>
+						<li class="selector slide11" onclick="setMark(10, 1), setSelected(10, 1)">
+							Группа виброустойчивости по ГОСТ Р 52931 = G1*
+						</li>
+						<li class="selector slide11" onclick="setMark(10, 2), setSelected(10, 2)">
+							Опция для маркировочной таблички по заказу потребителя.
+							Требуется указать параметры маркировки.
+						<!-- ST-(...) например: ТТ1, ТЕ342 и т.д. -->
+						</li>
+					</ul>
+					<section style = "display: block; text-align: left;">
+						<h3>*Выдержка из <a href="http://docs.cntd.ru/document/1200069617" target="_blank">ГОСТ Р 52931</a> 
+						для категории виброустойчивости G1: </h3>
+						<p>Изделия должны быть устойчивыми и (или) прочными к воздействию синусоидальных вибраций 
+						высокой частоты (с частотой перехода от 57 до 62Гц) с параметрами:</p>
+						<ul>
+							<li>Частота: 10-2000 Гц;</li>
+							<li>Амплитуда: 
+								<ol>
+									<li>смещения для частоты ниже частоты перехода: 0,350 мм,</li>
+									<li>ускорения для частоты выше частоты перехода: 49,0 м/с<sup>2</sup>;</li>
+								</ol>
+							</li>
+							<li>Размещение: Места, расположенные вблизи помещений, в которых установлены 
+							работающие авиационные двигатели.</li>
+						</ul>
+					</section>
+				</li>
+				<li class = "slide" id = "slide12">
+					<h2>Обозначение технических условий: ТУ 4211-007-12580824-2002</h2>
+					<p><i>При оформлении заказа не указывается</i></p>
+				</li>
+			</ul>
+		</div>
+		
+		<script src="script/scriptCommon.js"></script>
+		<script src="script/scriptMetran280.js"></script>
+	</body>
+</html>

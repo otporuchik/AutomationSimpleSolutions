@@ -1,0 +1,45 @@
+p {
+	font-weight: normal;
+}
+
+table {
+	width: 	100%;
+	margin-bottom: 50px;
+}
+
+table caption {
+	text-align: right;
+	font-weight: normal;
+	font-style: italic;
+}
+
+table, td, th {
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+td {
+	font-weight: normal;
+}
+
+.toLeft {
+	text-align: left;
+}
+
+.cable_entries_section {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.selectable {
+	cursor: pointer;
+}
+
+.selectable:hover {
+	background-color: pink;
+}
+
+.selectable:active {
+	background-color: yellow;
+}
