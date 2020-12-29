@@ -11,17 +11,17 @@
 	<body>
 	
 		<div class = "container">
-			<h1 class = "headTitle">Конфигуратор условного обозначения датчика избыточного давления "метран-150TG" и абсолютного давления "метран-150TA"</h1>
-			<p class = "headTitle">Согласно руководству по эксплуатации <a href = "passports/metran150/СПГК.5225.000.00_РЭ(изм.111)_верс_3.5.pdf" target = "_blank">СПГК.5225.000.00 РЭ(изм.111) версия 3.5</a></p>
+			<h1 class = "headTitle">Конфигуратор условного обозначения клапанного блока "Метран".</h1>
+			<p class = "headTitle">Согласно руководству по эксплуатации <a href = "passports/valveBlock/СПГК.5291.000.00_РЭ_(изм.24)_версия_2.1.pdf" target = "_blank">СПГК.5291.000.00 РЭ (изм.24) версия 2.1</a></p>
 			<ul class = "slidesList clear-style">
-				<li class="slideLabel" onclick="callSlide(1)">xx</li>
-				<li class="slideLabel" onclick="callSlide(2)">xx</li>
+				<li class="slideLabel" onclick="callSlide(1)">0104</li>
+				<li class="slideLabel" onclick="callSlide(2)">M</li>
 				<li class="slideLabel" onclick="callSlide(3)">xx</li>
 				<li class="slideLabel" onclick="callSlide(4)">xx</li>
 				<li class="slideLabel" onclick="callSlide(5)">xx</li>
 				<li class="slideLabel" onclick="callSlide(6)">xx</li>
 				<li class="slideLabel" onclick="callSlide(7)">xx</li>
-				<li class="slideLabel" onclick="callSlide(8)">xx</li>
+				<li class="slideLabel" onclick="callSlide(8)">1</li>
 				<li class="slideLabel" onclick="callSlide(9)">xx</li>
 				<li class="slideLabel" onclick="callSlide(10)">xx</li>
 				<li class="slideLabel" onclick="callSlide(11)">xx</li>
@@ -31,131 +31,101 @@
 			</ul>
 			<ul class="slides clear-style" id = "slides">
 				<li class="slide" id = "slide1">
-					<h2>Модель датчика:</h2>
-					<ul class="clear-style selectors-txt">
-						<li class="selector slide1" onclick="setMark(0, 0), setSelected(0, 0)">
-						<!--usual choice-->
-							150TG - датчик избыточного давления
-						</li>
-						<li class="selector slide1" onclick="setMark(0, 1), setSelected(0, 1)">
-							150TA - датчик абсолютного давления
-						</li>
-					</ul>
+					<h2>Описание изделия</h2>
+					<p>Традиционный клапанный блок</p>
+					<p class = "toLeft"><i>Без вариантов.</i></p>
 				</li>
 				<li class="slide" id="slide2">
-					<h2>Диапазон измерений</h2>
-					<table>
-						<tr>
-							<th>Код</th>
-							<th>Датчик 150TG</th>
-							<th>Датчик 150TA</th>
-						</tr>
-						<tr class = "selectable slide2" onclick = "setMark(1, 0), setSelected(1, 0)">
-							<td>1</td>
-							<td>(-101.3)-160кПа	</td>
-							<td>0-160кПа</td>
-						</tr>
-						<tr class = "selectable slide2" onclick = "setMark(1, 1), setSelected(1, 1)">
-							<td>2</td>
-							<td>(-101.3)-1.0МПа</td>
-							<td>0-1.0МПа</td>
-						</tr>
-						<tr class = "selectable slide2" onclick = "setMark(1, 2), setSelected(1, 2)">
-							<td>3</td>
-							<td>(-101.3)-6.0МПа</td>
-							<td>0-6.0МПа</td>
-						</tr>
-						<tr class = "selectable slide2" onclick = "setMark(1, 3), setSelected(1, 3)">
-							<td>4</td>
-							<td>(-101.3)-25МПа</td>
-							<td>0-25МПа</td>
-						</tr>
-						<tr class = "selectable slide2" onclick = "setMark(1, 4), setSelected(1, 4)">
-							<td>5</td>
-							<td>(-101.3)-60МПа</td>
-							<td>-</td>
-						</tr>
-					</table>
-					<p class = "toLeft"><i>101.3кПа - предполагаемое атмосферное давление, принимается как нулевая отметка.</i></p>
+					<h2>Изготовитель</h2>
+					<p>Метран</p>
+					<p class = "toLeft"><i>Без вариантов.</i></p>
 				
 				</li>
 				<li class = "slide" id = "slide3">
-					<h2>Технологическое соединение</h2>
+					<h2>Тип исполнения клапанного блока</h2>
 					<ul class="clear-style selectors-txt">
 						<li class="selector slide3" onclick="setMark(2, 0), setSelected(2, 0)">
-							М20х1.5 (код&nbsp;=&nbsp;2G)
+							Традиционный, соединение типа фланец-фланец (код&nbsp;=&nbsp;T)
 						</li>
 						<li class="selector slide3" id="label3-2" onclick="setMark(2, 1), setSelected(2, 1)">
-							1/2NPT, внутренняя резьба (код&nbsp;=&nbsp;2B)
+							Компактный, соединение типа фланец-фланец* (код&nbsp;=&nbsp;W)
 						</li>
 					</ul>
+					<p class = "toLeft"><i>* - не применяется для двухвентильных блоков (код 2) 
+					с кодом присоединения к процессу = F (фланцевое).</i></p>
 				</li>
 				<li class = "slide" id = "slide4">
-				<!--for TG-->
-					<h2 class="slide4header">Материал разделительной мембраны</h2>
-				<!--for TA-->
-					<h2 class="slide4header">Материал деталей, контактирующих с рабочей средой</h2>
+					<h2 class="slide4header">Количество вентилей</h2>
 					<ul class="clear-style selectors-txt">
-						<li class="selector slide4" id="label4-2" onclick="setMark(3, 0), setSelected(3, 0)">
-							315L SST (код&nbsp;=&nbsp;2)
+						<li class="selector slide4" onclick="setMark(3, 0), setSelected(3, 0)">
+							Двухвентильный (код&nbsp;=&nbsp;2) 
+							(Не применяется с типом W = компактный)
+							<!-- !!!!! не применяется с типом W !!!!!!!!!!!! --> 
 						</li>
-						<li class="selector slide4" id="label4-3" onclick="setMark(3, 1), setSelected(3, 1)">
-							Hastelloy (код&nbsp;=&nbsp;3)
+						<li class="selector slide4" onclick="setMark(3, 1), setSelected(3, 1)">
+							Трехвентильный (код&nbsp;=&nbsp;3)
+						</li>
+						<li class="selector slide4" onclick="setMark(3, 2), setSelected(3, 2)">
+							Пятивентильный (код&nbsp;=&nbsp;5)
 						</li>
 					</ul>
 				</li>
 				<li class = "slide" id = "slide5">
-					<h2>Заполняющая жидкость</h2>
-					<p><i>(длина погружной части, зависит от выбранного кода исполнения защитной арматуры.)</i></p>
+					<h2>Исполнение по материалам</h2>
 					<ul class="clear-style selectors-txt">
 						<li class="selector slide5" onclick="setMark(4, 0), setSelected(4, 0)">
-							Силикон (код&nbsp;=&nbsp;1)
+							Нержавеющая сталь 316 SST или 12Х18Н10Т (код&nbsp;=&nbsp;2)
 						</li>
 						<li class="selector slide5" onclick="setMark(4, 1), setSelected(4, 1)">
-							Нет <!-- - -->
+							Нержавеющая сталь 316 SST или сплав С-276 (код&nbsp;=&nbsp;4)
 						</li>
 					</ul>
 				</li>
 				<li class = "slide" id = "slide6">
-					<h2>Выходной сигнал</h2>
+					<h2>Соединение с процессом</h2>
 					<ul class="clear-style selectors-txt">
 						<li class="selector slide6" onclick="setMark(5, 0), setSelected(5, 0)">
-							4-20мА с цифровым сигналом на базе протокола HART (код&nbsp;=&nbsp;A)
+							Резьбовое соединение 1/2 NPT внутренняя (код&nbsp;=&nbsp;B)
 						</li>
 						<li class="selector slide6" onclick="setMark(5, 1), setSelected(5, 1)">
-							0-5мА (поставляется только с кодом М5 (встроенный ЖКИ), не применяется для датчиков с 
-							кодом IM (сертификация искробезопасности 0Ex ia IIC T5 GaX) (код&nbsp;=&nbsp;В)
+							Резьбовое соединение М20х1,5 наружная (код&nbsp;=&nbsp;C)
+						</li>
+						<li class="selector slide6" onclick="setMark(5, 2), setSelected(5, 2)">
+							Резьбовое соединение К 1/2" ГОСТ 6111 внутренняя* (код&nbsp;=&nbsp;D)
+						</li>
+						<li class="selector slide6" onclick="setMark(5, 3), setSelected(5, 3)">
+							Фланцевое соединение (не применяется с кодами типа клапанного блока W и 
+							количестве вентилей 2) (код&nbsp;=&nbsp;F)
+							<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 						</li>
 					</ul>
+					<p class = "toLeft"><i>* - Допускается замена на код B соединения с процессом.</i></p>
 				</li>
 				<li class = "slide" id = "slide7">
-					<h2>Индикация</h2>
+					<h2>Материал уплотнения вентиля*</h2>
 					<ul class="clear-style selectors-txt">
 						<li class="selector slide7" onclick="setMark(6, 0), setSelected(6, 0)">
-							Встроенный ЖКИ* (код&nbsp;=&nbsp;М5)
+							Фторопласт (PTFE) (код&nbsp;=&nbsp;1)
 						</li>
 						<li class="selector slide6" onclick="setMark(6, 1), setSelected(6, 1)">
-							Нет <!-- - -->
+							Графит (код&nbsp;=&nbsp;2)
+						</li>
+						<li class="selector slide6" onclick="setMark(6, 2), setSelected(6, 2)">
+							Графитонаполненный фторопласт (Ghraphite-filled PTFE) (только для кода 
+							специальной очистки UC - очистка для применения в среде, содержащей 
+							газообразный кислород.) (код&nbsp;=&nbsp;3)
 						</li>
 					</ul>
-					<p class = "toLeft"><i>* - Жидкокристаллический индикатор.</i></p>
+					<p class = "toLeft"><i>* - Материал уплотнительных колец соединения клапанного блока 
+					с датчиком давления соответствует коду материала уплотнения вентиля клапанного блока.</i></p>
 				</li>
 				<li class = "slide" id = "slide8">
-					<h2>Для специального применения</h2>
-					<ul class="clear-style selectors-txt">
-						<li class="selector slide8" onclick="setMark(7, 0), setSelected(7, 0)">
-							Сертификация искробезопасности 0Ex ia IIC T5 Ga X (код&nbsp;=&nbsp;IM)
-						</li>
-						<li class="selector slide8" onclick="setMark(7, 1), setSelected(7, 1)">
-							Сертификация взрывобезопасности 1Ex db IIC T6 Gb X (код&nbsp;=&nbsp;EM)
-						</li>
-						<li class="selector slide8" onclick="setMark(7, 2), setSelected(7, 2)">
-							Искро/взрывозащиты нет
-						</li>
-					</ul>
+					<h2>Седло клапанного блока</h2>
+					<p>Интегральное</p>
+					<p class = "toLeft"><i>Без вариантов.</i></p>
 				</li>
 				<li class = "slide" id = "slide9">
-					<h2>Встроенные клапанные блоки</h2>
+					<h2>Специальная очистка</h2>
 					<ul class="clear-style selectors-txt">
 						<li class="selector slide9" onclick="setMark(8, 0), setSelected(8, 0)">
 							Поставляется с установленным клапанным блоком* (не поставляется для датчиков с кодом ОР**).
