@@ -4,6 +4,7 @@ var slide6items = document.getElementsByClassName('slide6');
 var slide12Mark1Selector = document.getElementById('slide12Mark1Selector');
 var selectorSlide13 = document.getElementsByClassName('slide13');
 var additionalOptionsList = [];
+var mountBracketHeaderSlide13 = document.getElementById('mountBracketHeaderSlide13');
 
 function setAdditionalOption(i) {
 	var additionalOption = "";
@@ -116,6 +117,12 @@ function setOption(i, j) {
 					//valve block seat. slide 10. label 9.
 					labels[9].classList.add('displayFalse');
 					slide12Mark1Selector.innerText = "Исполнение для подключения метрологического оборудования = штуцер М10х1,5, установленный в дренажные отверстия, максимальное давление штуцера 16МПа (код=H2)";
+					//additional options, slide 13.
+					selectorSlide13[1].classList.remove('displayFalse');//vc
+					selectorSlide13[2].classList.remove('displayFalse');//vs
+					selectorSlide13[3].classList.add('displayFalse');//B1
+					selectorSlide13[4].classList.add('displayFalse');//B4
+					mountBracketHeaderSlide13.classList.remove('displayFalse');//mountBracketHeaderSlide13 header
 					return "0104";
 			case 1: slide3Items[0].classList.add('displayFalse');	//Традиционный, соединение типа фланец-фланец (код = T)
 					slide3Items[1].classList.add('displayFalse');	//Компактный (код = W)
@@ -138,6 +145,12 @@ function setOption(i, j) {
 					//valve block seat. slide 10. label 9.
 					labels[9].classList.remove('displayFalse');
 					slide12Mark1Selector.innerText = "Исполнение для подключения метрологического оборудования = штуцер М10х1,5, установленный в дренажные отверстия, максимальное давление штуцера 16МПа (код=H2)";
+					//additional options, slide 13.
+					selectorSlide13[1].classList.add('displayFalse');//vc
+					selectorSlide13[2].classList.add('displayFalse');//vs
+					selectorSlide13[3].classList.remove('displayFalse');//B1
+					selectorSlide13[4].classList.remove('displayFalse');//B4
+					mountBracketHeaderSlide13.classList.remove('displayFalse');//mountBracketHeaderSlide13 header
 					return "0105";
 			case 2: slide3Items[0].classList.add('displayFalse');	//Традиционный, соединение типа фланец-фланец (код = T)
 					slide3Items[1].classList.add('displayFalse');	//Компактный (код = W)
@@ -160,6 +173,12 @@ function setOption(i, j) {
 					//valve block seat. slide 10. label 9.
 					labels[9].classList.remove('displayFalse');
 					slide12Mark1Selector.innerText = "Исполнение для подключения метрологического оборудования с приваренным штуцером М20х1,5 (код=H2)";
+					//additional options, slide 13.
+					selectorSlide13[1].classList.add('displayFalse');//vc
+					selectorSlide13[2].classList.add('displayFalse');//vs
+					selectorSlide13[3].classList.add('displayFalse');//B1
+					selectorSlide13[4].classList.add('displayFalse');//B4
+					mountBracketHeaderSlide13.classList.add('displayFalse');//mountBracketHeaderSlide13 header
 					return "0106";
 		}
 		//item name - manufacturer. label 1.
