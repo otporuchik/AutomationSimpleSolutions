@@ -27,7 +27,6 @@
 				<li class="slideLabel" onclick="callSlide(11)">xx</li>
 				<li class="slideLabel" onclick="callSlide(12)">xx</li>
 				<li class="slideLabel" onclick="callSlide(13)">xx</li>
-				<li class="slideLabel" onclick="callSlide(14)">xx</li>
 			</ul>
 			<ul class="slides clear-style" id = "slides">
 				<li class="slide" id = "slide1">
@@ -46,7 +45,11 @@
 				</li>
 				<li class="slide" id="slide2">
 					<h2>Изготовитель</h2>
-					<p>Метран</p>
+					<ul class="clear-style selectors-txt">
+						<li class="selector slide2" onclick="setMark(1, 0), setSelected(1, 0)">
+							Метран (код&nbsp;=&nbsp;M)
+						</li>
+					</ul>
 					<p class = "toLeft"><i>Без вариантов.</i></p>
 				
 				</li>
@@ -74,7 +77,7 @@
 							Резьбовое (соединение типа резьба-резьба) (код&nbsp;=&nbsp;T)
 						</li>
 					</ul>
-					<p class = "toLeft"><i>* - не применяется для двухвентильных блоков (код 2) и для 
+					<p class = "toLeft slide3"><i>* - не применяется для двухвентильных блоков (код 2) и для 
 					кода присоединения к процессу = F (фланцевое).</i></p>
 				</li>
 				<li class = "slide" id = "slide4">
@@ -139,6 +142,7 @@
 				<!-- Только для штуцерного блока -->
 				<li class = "slide" id = "slide7">
 					<h2>Тип соединения с датчиком</h2>
+					<p><i>Только для штуцерного блока (код "0106")</i></p>
 					<ul class="clear-style selectors-txt">
 						<li class="selector slide7" onclick="setMark(6, 0), setSelected(6, 0)">
 							Резьбовое соединение с наружной резьбой 1/2 NPT (код&nbsp;=&nbsp;A)
@@ -152,9 +156,7 @@
 					</ul>
 				</li>
 				<li class = "slide" id = "slide8">
-					<!-- заголовок со звездочкой - для традиционного блока-->
 					<h2>Материал уплотнения вентиля*</h2>
-					<h2>Материал уплотрения вентиля</h2>
 					<ul class="clear-style selectors-txt">
 						<li class="selector slide8" onclick="setMark(7, 0), setSelected(7, 0)">
 							Фторопласт (PTFE) (код&nbsp;=&nbsp;1)
@@ -170,10 +172,11 @@
 					</ul>
 					<p class = "toLeft"><i>* - Материал уплотнительных колец соединения клапанного блока 
 					с датчиком давления соответствует коду материала уплотнения вентиля клапанного блока.</i></p>
-				</li
+				</li>
 				<!-- Только для традиционного клапанного блока -->
 				<li class = "slide" id = "slide9">
 					<h2>Тип датчика для подсоединения</h2>
+					<p><i>Только для традиционного клапанного блока (код "0104")</i></p>
 					<ul class="clear-style selectors-txt">
 						<li class="selector slide9" onclick="setMark(8, 0), setSelected(8, 0)">
 							С традиционным фланцем
@@ -185,9 +188,11 @@
 							(код&nbsp;=&nbsp;2)
 						</li>
 					</ul>
+				</li>
 				<!-- для интегрального и штуцерного блоков -->
 				<li class = "slide" id = "slide10">
 					<h2>Седло клапанного блока</h2>
+					<p><i>Только для интегрального или штуцерного клапанного блока (код "0105" или "0106")</i></p>
 					<ul class="clear-style selectors-txt">
 						<li class="selector slide10" onclick="setMark(9, 0), setSelected(9, 0)">
 							Интегральное
@@ -199,15 +204,8 @@
 				</li>
 				<li class = "slide" id = "slide11">
 					<h2>Специальная очистка</h2>
-					<ul class="clear-style selectors-txt">
-						<li class="selector slide11" onclick="setMark(10, 0), setSelected(10, 0)">
-							Поставляется с установленным клапанным блоком* (не поставляется для датчиков с кодом ОР**).
-							(код&nbsp;=&nbsp;S5)
-						</li>
-						<li class="selector slide11" onclick="setMark(10, 1), setSelected(10, 1)">
-							Нет
-						</li>
-					</ul>
+					<p class = "toLeft"><i>Очистка для применения в среде, содержащей газообразный кислород.</i></p>
+					<p class = "toLeft"><i>Применяется для кода материала уплотнения = "3" (графитонаполненный фторопласт Graphite-filled PTFE).</i></p>
 				</li>
 				<li class = "slide" id = "slide12">
 					<h2>Специальное исполнение</h2>
@@ -216,10 +214,12 @@
 							Исполнение с дренажными клапанами
 							(код&nbsp;=&nbsp;H1)
 						</li>
-						<li class="selector slide12" onclick="setMark(11, 1), setSelected(11, 1)">
-							Исполнеие для подключения метрологического оборудования = штуцер М10х1,5, 
-							установленный в дренажные отверстия, максимальное давление штуцера 16МПа. 
-							(код&nbsp;H2)
+						<li class="selector slide12" id="slide12Mark1Selector" onclick="setMark(11, 1), setSelected(11, 1)">
+							<!-- text inserts with js -->
+						</li>
+						<li class="selector slide12" onclick="setMark(11, 2), setSelected(11, 2)">
+							Обычное исполнение
+							(код&nbsp;=&nbsp;"-")
 						</li>
 					</ul>
 				</li>
@@ -229,13 +229,9 @@
 						<li>
 							<h3>Специальное исполнение</h3>
 							<ul class="clear-style selectors-txt">
-								<li class="selector slide13" onclick="setMark(12, 0), setSelected(12, 0)">
+								<li class="selector slide13" onclick="setAdditionalOption(0)">
 									Гарантийный срок эксплуатации клапанных блоков - 5 лет 
 									(код&nbsp;=&nbsp;WR5)
-								</li>
-								<li class="selector slide13" onclick="setMark(12, 1), setSelected(12, 1)">
-									Гарантийный срок эксплуатации клапанных блоков - обычный 
-									(код&nbsp;=&nbsp;-)
 								</li>
 							</ul>
 						</li>
@@ -244,22 +240,22 @@
 							<h3>Монтажные кронштейны</h3>
 							<ul class="clear-style selectors-txt">
 								<!-- для традиционного: -->
-								<li class="selector slide13" onclick="setMark(12, 2), setSelected(12, 2)">
+								<li class="selector slide13" onclick="setAdditionalOption(1)">
 									Кронштейн из углеродистой стали для крепления клапанного блока на трубе 
 									(код&nbsp;=&nbsp;VC)
 								</li>
-								<li class="selector slide13" onclick="setMark(12, 3), setSelected(12, 3)">
+								<li class="selector slide13" onclick="setAdditionalOption(2)">
 									Кронштейн из нержавеющей стали для крепления клапанного блока на трубе 
 									(код&nbsp;=&nbsp;VS)
 								</li>
 								<!-- для интегрального: -->
-								<li class="selector slide13" onclick="setMark(12, 4), setSelected(12, 4)">
+								<li class="selector slide13" onclick="setAdditionalOption(3)">
 									Монтажный кронштейн для крепления клапанного блока с кодом типа исполнения клапанного 
 									блока = Т (традиционного типа) на трубе с наружным диаметром 60мм (материал кронштейна 
 									и болтов - углеродистая сталь с покрытием)
 									(код&nbsp;=&nbsp;B1)
 								</li>
-								<li class="selector slide13" onclick="setMark(12, 5), setSelected(12, 5)">
+								<li class="selector slide13" onclick="setAdditionalOption(4)">
 									Монтажный кронштейн для крепления клапанного блока с кодом типа исполнения клапанного блока 
 									= С (Coplanar) и S (Coplanar с боковым подключением) на панели или трубе с наружным диаметром 
 									60мм (материал кронштейна и болтов - нержавеющая сталь)
@@ -272,33 +268,33 @@
 							<h3>Монтажные части*</h3>
 							<ul class="clear-style selectors-txt">
 								<!-- если код соединения с процессом = С -->
-								<li class="selector slide13" onclick="setMark(12, 6), setSelected(12, 6)">
+								<li class="selector slide13" onclick="setAdditionalOption(5)">
 									Ниппель с накидной гайкой М20х1,5, для соединения по наружному диаметру трубы 14мм 
 									(код&nbsp;=&nbsp;D0**)
 								</li>
 								<!-- Если код исполнения клапанного блока = Т и соединения с процессом = F -->
-								<li class= selector slide13" onclick="setMark(12, 7), setSelected(12, 7)">
+								<li class="selector slide13" onclick="setAdditionalOption(6)">
 									Монтажный фланец из нержавеющей стали 316 с резьбовым отверстием К1/4" ГОСТ 6111 
 									(код&nbsp;=&nbsp;D1)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 8), setSelected(12, 8)">
+								<li class="selector slide13" onclick="setAdditionalOption(7)">
 									Монтажный фланец из нержавеющей стали 316 с резьбовым отверстием К1/2" ГОСТ 6111 
 									(код&nbsp;=&nbsp;D2)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 9), setSelected(12, 9)">
+								<li class="selector slide13" onclick="setAdditionalOption(8)">
 									Монтажный фланец из нержавеющей стали 316 с резьбовым отверстием 1/4 NPT 
 									(код&nbsp;=&nbsp;D3)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 10), setSelected(12, 10)">
+								<li class="selector slide13" onclick="setAdditionalOption(9)">
 									Монтажный фланец из нержавеющей стали 316 с резьбовым отверстием 1/2 NPT 
 									(код&nbsp;=&nbsp;D4)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 11), setSelected(12, 11)">
+								<li class="selector slide13" onclick="setAdditionalOption(10)">
 									Монтажный фланец из нержавеющей стали 316 с ниппелем, с накидной гайкой М20х1,5, 
 									для соединения по наружному диаметру трубы 14мм
 									(код&nbsp;=&nbsp;D5**)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 12), setSelected(12, 12)">
+								<li class="selector slide13" onclick="setAdditionalOption(11)">
 									Монтажный фланец из углеродистой стали с покрытием, с ниппелем для соединения по 
 									наружному диаметру трубы 14мм
 									(код&nbsp;=&nbsp;D6)
@@ -319,13 +315,13 @@
 							<h3>Монтажные части</h3>
 							<ul class="clear-style selectors-txt">
 								<!-- если код соединения с процессом = В или С* -->
-								<li class= selector slide13" onclick="setMark(12, 13), setSelected(12, 13)">
+								<li class="selector slide13" onclick="setAdditionalOption(12)">
 									Монтажный фланец из нержавеющей стали 316 с ниппелем, с накидной гайкой М20х1,5, 
 									для соединения по наружному диаметру трубы 14мм
 									(код&nbsp;=&nbsp;D5*)
 								</li>
 								<!-- если код соединения с процессом = С -->
-								<li class= selector slide13" onclick="setMark(12, 14), setSelected(12, 14)">
+								<li class="selector slide13" onclick="setAdditionalOption(13)">
 									Ниппель с накидной гайкой М20х1,5, для соединения по наружному диаметру 
 									трубы 14мм
 									(код&nbsp;=&nbsp;2F**)
@@ -340,15 +336,15 @@
 						код монтажных частей = D0, D5 или D6. Для штуцерного - без условий. -->
 							<h3>Материал ниппеля</h3>
 							<ul class="clear-style selectors-txt">
-								<li class= selector slide13" onclick="setMark(12, 15), setSelected(12, 15)">
+								<li class="selector slide13" onclick="setAdditionalOption(14)">
 									Нержавеющая сталь 12Х18Н10Т или 316L
 									(код&nbsp;=&nbsp;2)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 16), setSelected(12, 16)">
+								<li class="selector slide13" onclick="setAdditionalOption(15)">
 									Углеродистая сталь с покрытием
 									(код&nbsp;=&nbsp;3)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 17), setSelected(12, 17)">
+								<li class="selector slide13" onclick="setAdditionalOption(16)">
 									Углеродистая сталь низкотемпературная 09Г2С с покрытием
 									(код&nbsp;=&nbsp;5)
 								</li>
@@ -358,11 +354,11 @@
 						<li>
 							<h3>Болты для сборки с датчиком давления</h3>
 							<ul class="clear-style selectors-txt">
-								<li class= selector slide13" onclick="setMark(12, 18), setSelected(12, 18)">
+								<li class="selector slide13" onclick="setAdditionalOption(17)">
 									Болт с резьбой М10х1,5 из углеродистой стали с покрытием 
 									(код&nbsp;=&nbsp;L3)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 19), setSelected(12, 19)">
+								<li class="selector slide13" onclick="setAdditionalOption(18)">
 									Болт с резьбой 7/16-20UNF из нержавеющей стали ASTMA A193 B8M CLASS2 (только для 
 									кода типа исполнения клапанного блока W* только для кода типа датчика для подсоединения 2**)
 									(код&nbsp;=&nbsp;L8)
@@ -377,15 +373,15 @@
 						<li>
 							<h3>Болты для сборки с датчиком давления</h3>
 							<ul class="clear-style selectors-txt">
-								<li class= selector slide13" onclick="setMark(12, 20), setSelected(12, 20)">
+								<li class="selector slide13" onclick="setAdditionalOption(19)">
 									Болты 7/16-20UNF из углеродистой стали по ASTMA A 449 Type1 с покрытием
 									(код&nbsp;=&nbsp;L3)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 21), setSelected(12, 21)">
+								<li class="selector slide13" onclick="setAdditionalOption(20)">
 									Болты 7/16-20UNF из нержавеющей стали 316 SST по ASTM F593 GP2 CW 
 									(код&nbsp;=&nbsp;L4)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 22), setSelected(12, 22)">
+								<li class="selector slide13" onclick="setAdditionalOption(21)">
 									Болты 7/16-20UNF из нержавеющей стали ASTM A193 B8M Class2 (для кода специального исполнения 
 									BR6*, для сборки с датчиком давления с кодом HP**)
 									(код&nbsp;=&nbsp;L8)
@@ -400,13 +396,9 @@
 						<li>
 							<h3>Заглушка</h3>
 							<ul class="clear-style selectors-txt">
-								<li class= selector slide13" onclick="setMark(12, 23), setSelected(12, 23)">
+								<li class="selector slide13" onclick="setAdditionalOption(22)">
 									Заглушка 1/4 NPT для установки в дренажные отверстия
 									(код&nbsp;=&nbsp;Н3*)
-								</li>
-								<li class= selector slide13" onclick="setMark(12, 24), setSelected(12, 24)">
-									нет 
-									(код&nbsp;=&nbsp;"-")
 								</li>
 							</ul>
 							<p class="toLeft"><i>* - Для количества вентилей = 2 - 1шт., для кода количества 
@@ -417,13 +409,9 @@
 						<li>
 							<h3>Заглушка</h3>
 							<ul class="clear-style selectors-txt">
-								<li class= selector slide13" onclick="setMark(12, 25), setSelected(12, 25)">
+								<li class="selector slide13" onclick="setAdditionalOption(23)">
 									Заглушка 1/4 NPT для установки в дренажное отверстие
 									(код&nbsp;=&nbsp;Н3)
-								</li>
-								<li class= selector slide13" onclick="setMark(12, 26), setSelected(12, 26)">
-									нет 
-									(код&nbsp;=&nbsp;"-")
 								</li>
 							</ul>
 						</li>
@@ -431,66 +419,66 @@
 							<h3>Специальные опции</h3>
 							<ul class="clear-style selectors-txt">
 								<!-- только для традиционного клапанного блока -->
-								<li class= selector slide13" onclick="setMark(12, 27), setSelected(12, 27)">
+								<li class="selector slide13" onclick="setAdditionalOption(24)">
 									Дополнительный комплект уплотнительных колец в количестве 4шт для сборки 
 									клапанного блока с датчиком давления (материал соответствует коду материала уплотнения)
 									(код&nbsp;=&nbsp;SR)
 								</li>
 								<!-- для всех -->
-								<li class= selector slide13" onclick="setMark(12, 28), setSelected(12, 28)">
+								<li class="selector slide13" onclick="setAdditionalOption(25)">
 									Техническое наблюдение Российского Морского судоходства
 									(код&nbsp;=&nbsp;MR)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 29), setSelected(12, 29)">
+								<li class="selector slide13" onclick="setAdditionalOption(26)">
 									Сертификат соответстсвия нормам по сейсмостойкости
 									(код&nbsp;=&nbsp;SM)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 30), setSelected(12, 30)">
-									Температура окружающей среды от минус 60<sup>0</sup>С. (применяется только с кодом 
-									материала уплотнения 1*)
+								<li class="selector slide13" onclick="setAdditionalOption(27)">
+									Температура окружающей среды от минус 60&deg;С. 
+									(применяется только с кодом материала уплотнения 1*)
 									(код&nbsp;=&nbsp;BR6)
 								</li>
-								<li class= selector slide13" onclick="setMark(12, 31), setSelected(12, 31)">
+								<li class="selector slide13" onclick="setAdditionalOption(28)">
 									Утверждение о соответствии NACE MR0175/ISO 15156-2015, NACE MR0103/ISO 17945-2015
 									(код&nbsp;=&nbsp;Q15**)
 								</li>
 							</ul>
 							<!-- примечания для традиционного и интегрального клапанного блоков -->
-							<p class="toLeft"><i><pre>
-								* - Код материала уплотнения 1 = фторопласт (PTFE).
+							<p class="toLeft"><i>
+								* - Код материала уплотнения 1 = фторопласт (PTFE).<br>
 								** - Применяется только с кодом исполнения по материалам 4***.
 								Не применяется с кодом соединения с процессом С****,
-								с кодом монтажных частей D0, D5, D6*****.
-								*** - код исполнения по материалам 4 = нержавеющая сталь 316 SST и сплав С-276.
-								**** - код соединения с процессом С = резьбовое соединение М20х1,5 наружная
-								***** - код монтажных частей:
+								с кодом монтажных частей D0, D5, D6*****.<br>
+								*** - код исполнения по материалам 4 = нержавеющая сталь 316 SST и сплав С-276.<br>
+								**** - код соединения с процессом С = резьбовое соединение М20х1,5 наружная<br>
+								***** - код монтажных частей:<br>
+								<br>
 								код = D0 - Ниппель с накидной гайкой М20х1,5, для соединения
-								по наружному диаметру трубы 14мм
-
+								по наружному диаметру трубы 14мм<br>
+								<br>
 								код = D5 - Монтажный фланец из нержавеющей стали 316 с ниппелем,
-								с накидной гайкой М20х1,5 для соединения по наружному диаметру трубы 14мм 
-
+								с накидной гайкой М20х1,5 для соединения по наружному диаметру трубы 14мм<br>
+								<br>
 								код = D6 - Монтажный фланец из углеродистой стали с покрытием
 								с ниппелем для соединения по наружному диаметру трубы 14мм
-							</pre></i></p>
+							</i></p>
 							<!-- примечания для штуцерного клапанного блока -->
-							<p class="toLeft"><i><pre>
-								* - Код материала уплотнения 1 = фторопласт (PTFE).
+							<p class="toLeft"><i>
+								* - Код материала уплотнения 1 = фторопласт (PTFE).<br>
 								** - Применяется только с кодом исполнения по материалам 4***.
 								Не применяется с кодом соединения с датчиком B****,
-								с кодом монтажных частей D5, 2F*****.
-								*** - код исполнения по материалам 4 = нержавеющая сталь 316 SST и сплав С-276.
-
-
-								**** - код соединения с датчиком В = накидная гайка М20х1,5 (для прямого подключения к датчику).
-
-								***** - код монтажных частей:
-
+								с кодом монтажных частей D5, 2F*****.<br>
+								*** - код исполнения по материалам 4 = нержавеющая сталь 316 SST и сплав С-276.<br>
+								<br>
+								**** - код соединения с датчиком В = накидная гайка М20х1,5 (для прямого подключения к датчику).<br>
+								<br>
+								***** - код монтажных частей:<br>
+								<br>
 								код = D5 - Монтажный фланец из нержавеющей стали 316 с ниппелем,
-								с накидной гайкой М20х1,5 для соединения по наружному диаметру трубы 14мм 
-
+								с накидной гайкой М20х1,5 для соединения по наружному диаметру трубы 14мм<br>
+								<br>
 								код = 2F - Ниппель с накидной гайкой М20х1,5 для соединения по наружному диаметру трубы 14мм.
-							</pre></i></p>
+							</i></p>
 						</li>
 					</ul>
 				</li>	
@@ -498,6 +486,6 @@
 		</div>
 		
 		<script src="script/scriptCommon.js"></script>
-		<script src="script/scriptMetran150.js"></script>
+		<script src="script/scriptMetranValveBlock.js"></script>
 	</body>
 </html>

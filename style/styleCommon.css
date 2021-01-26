@@ -26,7 +26,7 @@ body {
 .slidesList {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	margin-bottom: 30px;
 }
 
@@ -59,12 +59,12 @@ body {
 
 .selector:hover {
 	border: 2px solid red;
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .selector:active {
-	border: 4px solid red;
-	box-shadow: none;
+	border: 2px solid red;
+	box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .selectors-img {
@@ -86,16 +86,16 @@ body {
 
 .img-selectors:hover {
 	border-color: red;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .img-selectors:active {
-	border: 4px solid red;
 	box-shadow: none;
 }
 
 .selected {
 	color: brown;
-	border-width: 3px;
+	border-width: 2px;
 	border-color: orange;
 }
 
