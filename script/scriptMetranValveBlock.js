@@ -5,6 +5,8 @@ var slide12Mark1Selector = document.getElementById('slide12Mark1Selector');
 var selectorSlide13 = document.getElementsByClassName('slide13');
 var additionalOptionsList = [];
 var mountBracketHeaderSlide13 = document.getElementById('mountBracketHeaderSlide13');
+var mountingParts010405 = document.getElementById('mountingParts010405');
+var mountingParts0106 = document.getElementById('mountingParts0106');
 
 function setAdditionalOption(i) {
 	var additionalOption = "";
@@ -19,29 +21,105 @@ function setAdditionalOption(i) {
 				break;
 		case 4: additionalOption = "B4";
 				break;
-		case 5: additionalOption = "D0";
+		case 5: if(labels[5].innerText === "C") {
+					additionalOption = "D0";
+				}	else {
+					selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+					alert('Допустимо только для кода соединения с процессом = С (резьбовое соединение М20х1,5, наружная)');
+				}
 				break;
-		case 6: additionalOption = "D1";
+		//start condition only if label 2 inner text == T and label 5 == F. slide13 mounting parts for 0104 and 0105
+		case 6: if(labels[2].innerText === "T" && labels[5].innerText === "F") {
+					additionalOption = "D1";
+				} else {
+					selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+					alert('Допустимо только для кода соединения с процессом = F и типа клапанного блока T');
+				}
 				break;
-		case 7: additionalOption = "D2";
+		case 7: if(labels[2].innerText === "T" && labels[5].innerText === "F") {
+					additionalOption = "D2";
+				} else {
+					selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+					alert('Допустимо только для кода соединения с процессом = F и типа клапанного блока T');
+				}
 				break;
-		case 8: additionalOption = "D3";
+		case 8: if(labels[2].innerText === "T" && labels[5].innerText === "F") {
+					additionalOption = "D3";
+				} else {
+					selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+					alert('Допустимо только для кода соединения с процессом = F и типа клапанного блока T');
+				}
 				break;
-		case 9: additionalOption = "D4";
+		case 9: if(labels[2].innerText === "T" && labels[5].innerText === "F") {
+					additionalOption = "D4";
+				} else {
+					selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+					alert('Допустимо только для кода соединения с процессом = F и типа клапанного блока T');
+				}
 				break;
-		case 10: additionalOption = "D5";
+		case 10: if(labels[2].innerText === "T" && labels[5].innerText === "F") {
+					additionalOption = "D5";
+				} else {
+					selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+					alert('Допустимо только для кода соединения с процессом = F и типа клапанного блока T');
+				}
 				break;
-		case 11: additionalOption = "D6";
+		case 11: if(labels[2].innerText === "T" && labels[5].innerText === "F") {
+					additionalOption = "D6";
+				} else {
+					selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+					alert('Допустимо только для кода соединения с процессом = F и типа клапанного блока T');
+				}
 				break;
-		case 12: additionalOption = "D5";
+		//end end condition only if label 2 inner text == T and label 5 == F. slide13 mounting parts for 0104 and 0105
+		//slide13 mounting parts for 0106 start
+		case 12: if(labels[6].innerText === "B" || labels[6].innerText === "C") {
+				additionalOption = "D5";
+				} else {
+					selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+					alert('Допустимо только для типа соединения с датчиком C или B.');
+				}
 				break;
-		case 13: additionalOption = "2F";
+		case 13: if(labels[6].innerText === "C") {
+					additionalOption = "2F";
+				} else {
+					selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+					alert('Допустимо только для типа соединения с датчиком C.');
+				}
 				break;
-		case 14: additionalOption = "2";
+		//slide13 mounting parts for 0106 end
+		case 14: if(labels[0].innerText != '0106') {
+					if(selectorSlide13[5].classList.contains('selected') || //D0
+						selectorSlide13[10].classList.contains('selected') || //D5
+						selectorSlide13[11].classList.contains('selected')) { //D6
+							additionalOption = "2";
+					} else {
+						selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+						alert('Допустимо только совместно с кодом монтажных частей D0, D5 или D6');
+					}
+				} else additionalOption = "2";
 				break;
-		case 15: additionalOption = "3";
+		case 15: if(labels[0].innerText != '0106') {
+					if(selectorSlide13[5].classList.contains('selected') || //D0
+						selectorSlide13[10].classList.contains('selected') || //D5
+						selectorSlide13[11].classList.contains('selected')) { //D6
+							additionalOption = "3";
+					} else {
+						selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+						alert('Допустимо только совместно с кодом монтажных частей D0, D5 или D6');
+					}
+				} else additionalOption = "3";
 				break;
-		case 16: additionalOption = "5";
+		case 16: if(labels[0].innerText != '0106') {
+					if(selectorSlide13[5].classList.contains('selected') || //D0
+						selectorSlide13[10].classList.contains('selected') || //D5
+						selectorSlide13[11].classList.contains('selected')) { //D6
+							additionalOption = "5";
+					} else {
+						selectorSlide13[i].classList.add('selected');//crutch to unselect this item with toggle at the end of function.
+						alert('Допустимо только совместно с кодом монтажных частей D0, D5 или D6');
+					}
+				} else additionalOption = "5";
 				break;
 		case 17: additionalOption = "L3";
 				break;
@@ -118,11 +196,14 @@ function setOption(i, j) {
 					labels[9].classList.add('displayFalse');
 					slide12Mark1Selector.innerText = "Исполнение для подключения метрологического оборудования = штуцер М10х1,5, установленный в дренажные отверстия, максимальное давление штуцера 16МПа (код=H2)";
 					//additional options, slide 13.
+					additionalOptionsList.length = 0;//clear additional option list
 					selectorSlide13[1].classList.remove('displayFalse');//vc
 					selectorSlide13[2].classList.remove('displayFalse');//vs
 					selectorSlide13[3].classList.add('displayFalse');//B1
 					selectorSlide13[4].classList.add('displayFalse');//B4
 					mountBracketHeaderSlide13.classList.remove('displayFalse');//mountBracketHeaderSlide13 header
+					mountingParts010405.classList.remove('displayFalse');
+					mountingParts0106.classList.add('displayFalse');
 					return "0104";
 			case 1: slide3Items[0].classList.add('displayFalse');	//Традиционный, соединение типа фланец-фланец (код = T)
 					slide3Items[1].classList.add('displayFalse');	//Компактный (код = W)
@@ -146,11 +227,14 @@ function setOption(i, j) {
 					labels[9].classList.remove('displayFalse');
 					slide12Mark1Selector.innerText = "Исполнение для подключения метрологического оборудования = штуцер М10х1,5, установленный в дренажные отверстия, максимальное давление штуцера 16МПа (код=H2)";
 					//additional options, slide 13.
+					additionalOptionsList.length = 0;//clear additional option list
 					selectorSlide13[1].classList.add('displayFalse');//vc
 					selectorSlide13[2].classList.add('displayFalse');//vs
 					selectorSlide13[3].classList.remove('displayFalse');//B1
 					selectorSlide13[4].classList.remove('displayFalse');//B4
 					mountBracketHeaderSlide13.classList.remove('displayFalse');//mountBracketHeaderSlide13 header
+					mountingParts010405.classList.remove('displayFalse');
+					mountingParts0106.classList.add('displayFalse');
 					return "0105";
 			case 2: slide3Items[0].classList.add('displayFalse');	//Традиционный, соединение типа фланец-фланец (код = T)
 					slide3Items[1].classList.add('displayFalse');	//Компактный (код = W)
@@ -174,11 +258,14 @@ function setOption(i, j) {
 					labels[9].classList.remove('displayFalse');
 					slide12Mark1Selector.innerText = "Исполнение для подключения метрологического оборудования с приваренным штуцером М20х1,5 (код=H2)";
 					//additional options, slide 13.
+					additionalOptionsList.length = 0;//clear additional option list
 					selectorSlide13[1].classList.add('displayFalse');//vc
 					selectorSlide13[2].classList.add('displayFalse');//vs
 					selectorSlide13[3].classList.add('displayFalse');//B1
 					selectorSlide13[4].classList.add('displayFalse');//B4
 					mountBracketHeaderSlide13.classList.add('displayFalse');//mountBracketHeaderSlide13 header
+					mountingParts010405.classList.add('displayFalse');
+					mountingParts0106.classList.remove('displayFalse');
 					return "0106";
 		}
 		//item name - manufacturer. label 1.
@@ -248,7 +335,6 @@ function setOption(i, j) {
 						alert('Недопустимо для количества вентилей = 2, или для компактного исполнения клапанного блока с кодом "W"');
 						return "xx";
 					} else return "F";
-					return "F";
 			case 5: if((labels[2].innerText != "T") || (labels[2].innerText === "xx")) {
 						alert('Допустимо только для традиционного исполнения клапанного блока с кодом "T"');
 						return "xx";
@@ -317,11 +403,8 @@ function setOption(i, j) {
 			case 2: return "-";
 		}
 		
-		// item name - additional options
-		case 12: switch (j) {
-			case 0: return "WR5";
-			case 1: return "-";
-		}
+		// item name - additional options. slide 13. label 12.
+		
 		/* ************** */
 	}
 }
